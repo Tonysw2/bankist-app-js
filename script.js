@@ -188,8 +188,6 @@ const updateUI = function (acc) {
 // Event handlers
 let currentAccount;
 
-// experimenting API
-
 // FAKE LOGIN
 // currentAccount = account1;
 // containerApp.style.opacity = 100;
@@ -199,7 +197,7 @@ let currentAccount;
 const startLogoutTimer = function (t) {
   let time = t;
 
-  const timer = function() {
+  const timer = function () {
     console.log(time);
 
     // time format
@@ -218,9 +216,9 @@ const startLogoutTimer = function (t) {
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
     }
-  }
+  };
 
-  const countDown = setInterval(, 1000);
+  const countDown = setInterval(timer, 1000);
 };
 
 btnLogin.addEventListener('click', function (e) {
@@ -232,7 +230,7 @@ btnLogin.addEventListener('click', function (e) {
   );
   // console.log(currentAccount);
 
-  startLogoutTimer(10);
+  startLogoutTimer(300);
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and message
